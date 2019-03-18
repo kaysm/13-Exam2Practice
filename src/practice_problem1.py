@@ -35,12 +35,11 @@ import sys
 
 def main():
     """ Calls the   TEST   functions in this module. """
-
     ###########################################################################
     # UN-comment tests as you work the problems.
     ###########################################################################
 
-    # run_test_init()
+    run_test_init()
     # run_test_append_string()
     # run_test_double()
     # run_test_shrink()
@@ -103,6 +102,7 @@ class Box(object):
         #    DIFFICULTY:      3
         #    TIME ESTIMATE:   5 minutes.
         # ---------------------------------------------------------------------
+        
 
     def append_string(self, additional_contents):
         """
