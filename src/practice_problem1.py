@@ -39,9 +39,9 @@ def main():
     # UN-comment tests as you work the problems.
     ###########################################################################
 
-    run_test_init()
+    # run_test_init()
     # run_test_append_string()
-    # run_test_double()
+    run_test_double()
     # run_test_shrink()
     # run_test_double_then_shrink()
     # run_test_reset()
@@ -94,7 +94,7 @@ class Box(object):
           :type volume: int
         """
         # ---------------------------------------------------------------------
-        # TODO: 2. Implement and test this function.
+        # DONE: 2. Implement and test this function.
         #     See the testing code (below) for more examples.
         # ---------------------------------------------------------------------
         # ---------------------------------------------------------------------
@@ -102,7 +102,11 @@ class Box(object):
         #    DIFFICULTY:      3
         #    TIME ESTIMATE:   5 minutes.
         # ---------------------------------------------------------------------
-        
+        if volume < len(str(contents)):
+            self.contents = ''
+        else:
+            self.contents = contents
+        self.volume = volume
 
     def append_string(self, additional_contents):
         """
