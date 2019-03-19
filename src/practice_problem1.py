@@ -162,8 +162,15 @@ class Box(object):
         #       Read_this_ONLY_when_asked_Part_2.txt
         #    and complete your work on the problem.
         # ---------------------------------------------------------------------
-        if self.volume-len(self.contents)
-        self.contents = self.contents + additional_contents
+        space = self.volume-len(self.contents)
+        adda = ''
+        for k in range(space):
+            adda = adda + additional_contents[k]
+        self.contents = self.contents + adda
+        left = ''
+        for k in range(space-1, len(additional_contents), 1):
+            left = left + additional_contents[k]
+        return left
 
 
 
@@ -335,6 +342,7 @@ class Box(object):
         #    TIME ESTIMATE:   5 minutes.
         # ---------------------------------------------------------------------
 
+
     def steal(self, other_box):
         """
         What comes in:
@@ -366,6 +374,7 @@ class Box(object):
         # FOR FULL CREDIT, YOUR SOLUTION MUST BE NO MORE THAN
         #    ** TWO **   LINES OF CODE.
         #######################################################################
+
 
     def get_history(self):
         """
@@ -424,7 +433,7 @@ class Box(object):
           :type other_box: Box
         """
         # ---------------------------------------------------------------------
-        # TODO: 10. Implement and test this function.
+        # DONE: 10. Implement and test this function.
         #     The testing code is already written for you (above).
         # ---------------------------------------------------------------------
         # ---------------------------------------------------------------------
@@ -432,6 +441,10 @@ class Box(object):
         #    DIFFICULTY:      4
         #    TIME ESTIMATE:   5 minutes.
         # ---------------------------------------------------------------------
+        contents = self.contents + other_box.contents
+        volume = self.volume + other_box.volume
+        b2 = Box(contents, volume)
+        return b2
 
 
 ###############################################################################

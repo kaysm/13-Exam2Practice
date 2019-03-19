@@ -32,8 +32,8 @@ import time
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    # run_test_practice_problem2a()
-    run_test_practice_problem2b()
+    run_test_practice_problem2a()
+    # run_test_practice_problem2b()
 
 
 ###############################################################################
@@ -44,7 +44,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4    ** tests that, taken together,
     #   would form a    ** REASONABLY GOOD test set **
@@ -58,6 +58,10 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+    print(practice_problem2a([3, 5, -6, 12, 7], 6))
+    print(practice_problem2a([3, 5, -6, 12, 7], -3))
+    print(practice_problem2a([3, 5, -6, 12, 7], 0))
+    print(practice_problem2a([78, 55, -26, -84, 7], 20))
 
 
 def practice_problem2a(sequence, delta):
@@ -79,13 +83,16 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     WRITE THE TESTS FIRST (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ###########################################################################
+    for k in range(len(sequence)):
+        sequence[k] = sequence[k]+delta
+    return sequence
 
 
 def run_test_practice_problem2b():
