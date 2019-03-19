@@ -40,8 +40,8 @@ def main():
     ###########################################################################
 
     # run_test_init()
-    # run_test_append_string()
-    run_test_double()
+    run_test_append_string()
+    # run_test_double()
     # run_test_shrink()
     # run_test_double_then_shrink()
     # run_test_reset()
@@ -162,6 +162,11 @@ class Box(object):
         #       Read_this_ONLY_when_asked_Part_2.txt
         #    and complete your work on the problem.
         # ---------------------------------------------------------------------
+        if self.volume-len(self.contents)
+        self.contents = self.contents + additional_contents
+
+
+
 
     def double(self):
         """
